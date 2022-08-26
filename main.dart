@@ -5,12 +5,13 @@ main(List<String> args) {
   if (args.isEmpty) {
     throw ArgumentError('No arguments given');
   }
-  if (args.length != 3 || args.length != 2) {
+  if (args.length != 3 && args.length != 2) {
     throw ArgumentError('Not all arguments given');
   }
-  final pubspecLocation = args[0];
-  final buildNumber = args[1];
-  var appVersion;
+
+  String pubspecLocation = args[0];
+  String buildNumber = args[1];
+  String appVersion;
   if (args.length == 3) {
     appVersion = args[2];
   }

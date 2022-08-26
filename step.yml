@@ -45,17 +45,17 @@ inputs:
       is_required: false
 
 outputs:
-  - FLUTTER_PUBSPEC_APP_VERSION:
+  - DART_PUBSPEC_APP_VERSION:
     opts:
       title: Flutter / Dart pubspec application version which was new set or already set as input.
       description: |-
         The application version which is set in the pubspec.yaml version string at the **project location**.
-  - FLUTTER_PUBSPEC_APP_BUILD_NUMBER:
+  - DART_PUBSPEC_APP_BUILD_NUMBER:
     opts:
       title: Flutter / Dart pubspec application build number which was set as input.
       description: |-
         The application build number is set in the pubspec.yaml version string at the **project location**.
-  - FLUTTER_PUBSPEC_APP_VERSION_STRING:
+  - DART_PUBSPEC_APP_VERSION_STRING:
     opts:
       title: Flutter / Dart pubspec application version string with version+buildnumber which is set in pubspec.yaml.
       description: |-
