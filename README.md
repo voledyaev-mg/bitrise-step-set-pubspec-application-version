@@ -1,7 +1,6 @@
-# Get Flutter version
+# Set pubspec version info
 
-Extracts the Flutter version from pubspec.lock (if present) or pubspec.yml and sets `$FLUTTER_VERSION` environmental variable.
-
+Sets the application version in pubspec.yaml.yml. By given in as input the application build number and optional the application version.
 
 ## How to use this Step
 
