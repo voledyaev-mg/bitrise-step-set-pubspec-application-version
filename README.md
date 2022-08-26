@@ -1,6 +1,6 @@
 # Set pubspec version info
 
-Sets the application version in pubspec.yaml.yml. By given in as input the application build number and optional the application version.
+Sets the application version in pubspec.yaml. By given in as input the application build number and optional the application version.
 
 ## How to use this Step
 
