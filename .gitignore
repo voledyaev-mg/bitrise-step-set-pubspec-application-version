@@ -1,0 +1,8 @@
+.dart_tool/
+.packages
+pubspec.lock
+test/*
+.bitrise*
+.gows.user.yml
+.DS_Store
+*_tmp

@@ -1,0 +1,10 @@
+name: flutterappversion
+description: read and write versionName and versionCode
+publish_to: "none"
+version: 1.0.0
+
+environment:
+  sdk: '>=2.8.1 <3.0.0'
+
+dependencies:
+  yaml_modify: ^1.0.1
