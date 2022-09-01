@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# Get the current directory where this step.sh is running
+RUN_DIR=$(dirname "$0")
+
 get_abs_filename() {
   # $1 : relative filename
   echo "$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
@@ -25,10 +28,12 @@ APP_VERSION="${application_version}"
 
 DART=`which dart`
 
-# install dart packages for tool
-$DART pub get
+# install dart packages for tool in a subshell
+(
+    cd "$RUN_DIR" && $DART pub get
+)
 
-STDOUT=$($DART run main.dart $PUBSPEC_YAML_PATH $BITRISE_BUILD_NUMBER $APP_VERSION)
+STDOUT=$($DART run "$RUN_DIR/main.dart" "$PUBSPEC_YAML_PATH" $BITRISE_BUILD_NUMBER $APP_VERSION)
 
 echo $STDOUT
 
