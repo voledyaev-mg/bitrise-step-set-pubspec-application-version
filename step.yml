@@ -1,6 +1,6 @@
-title: Set application version and build number in pubspec.yaml file
+title: Set pubspec version and build number
 summary: Sets application version and build number in pubspec file and returns the new version info
-description: Sets the application version by the inputs for application version and build number. The application build number is mandatory to provide for this input.
+description: Sets the application version by the inputs for application version and build number. The application build number and the project root are mandatory to provide as inputs.
 website: https://github.com/milkinteractive/bitrise-step-set-pubspec-application-version
 source_code_url: https://github.com/milkinteractive/bitrise-step-set-pubspec-application-version
 support_url: https://github.com/milkinteractive/bitrise-step-set-pubspec-application-version/issues
@@ -25,16 +25,16 @@ inputs:
   - project_location: $BITRISE_SOURCE_DIR
     opts:
       title: Project Location
-      summary: The root dir of your Flutter project
+      summary: The root directory of your Flutter or Dart project i.e. from $BITRISE_SOURCE_DIR
       description: |-
-        The root dir of your Flutter project that contains *pubspec.yaml* and optionally *pubspec.lock*.
+        The root directory of your Flutter or Dart project that contains the *pubspec.yaml* file which is in general accessible over the $BITRISE_SOURCE_DIR variable.
       is_required: true
   - bitrise_buildnumber: $BITRISE_BUILD_NUMBER
     opts:
       title: Application build number
-      summary: Application build number could be from the build on bitrise.io from BITRISE_BUILD_NUMBER.
+      summary: Application build number i.e. from $BITRISE_BUILD_NUMBER.
       description: |-
-        The application build number which could be used from the build on bitrise.io over variable BITRISE_BUILD_NUMBER.
+        The application build number which could be used with variable $BITRISE_BUILD_NUMBER.
       is_required: true
   - application_version:
     opts:
