@@ -1,4 +1,5 @@
 import 'dart:io';
+
 import 'package:yaml_modify/yaml_modify.dart';
 
 main(List<String> args) {
@@ -11,7 +12,7 @@ main(List<String> args) {
 
   String pubspecLocation = args[0];
   String buildNumber = args[1];
-  String appVersion;
+  String? appVersion;
   if (args.length == 3) {
     appVersion = args[2];
   }
